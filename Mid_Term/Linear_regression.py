@@ -26,10 +26,10 @@ ss_res = np.sum((y - y_pred) ** 2)
 r2 = 1 - (ss_res / ss_total)
 
 #Print đánh giá mô hình
-print("Hệ số beta (bao gồm intercept):")
-print(beta.flatten())
-print("Mean squared Error:", mse)
-print ("R^2 score:", r2)
+#print("Hệ số beta (bao gồm intercept):")
+#print(beta.flatten())
+#print("Mean squared Error:", mse)
+#print ("R^2 score:", r2)
 
 #Dự đoán giá nhà cho một số mẫu mới
 new_house = np.array([[100, 1, 3, 1], [150, 0, 4, 1], [80, 1, 2, 0]])

@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Read data from file csv
@@ -20,9 +21,6 @@ XtX_inv = np.linalg.inv(XtX)
 Xty = X_bias.T.dot(y)
 beta = XtX_inv.dot(Xty)
 
-#Prediction
-y_pred = X_bias.dot(beta)
-
 #Predict new data
 #Create new data for prediction
 new_house = np.array([[100, 1, 3, 1], [150, 0, 4, 1], [80, 1, 2, 0]])
@@ -39,8 +37,11 @@ print(predict)
 
 
 """
+#Prediction
+y_pred = X_bias.dot(beta)
 #Rate the model
 #Calculate Mean Squared Error (MSE) and R^2 score
+
 mse = np.mean((y - y_pred) ** 2)
 ss_total = np.sum((y - np.mean(y)) ** 2)
 ss_res = np.sum((y - y_pred) ** 2)
@@ -66,4 +67,5 @@ plt.title("Linear Regression: Actual vs Predicted Prices")
 plt.legend()
 plt.grid(True)
 plt.show()
+
 """
